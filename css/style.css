@@ -58,3 +58,40 @@ body {
     padding-top: 23px;
     padding-bottom: 15px;
 }
+
+
+.resultado, .resultado2 {
+    text-align: right;
+}
+
+.resultado > h1 {
+    font-size: 70px;
+}
+
+.resultado2 > p {
+    font-size: 18px;
+    margin-bottom: -4px;
+}
+
+.cabecalio > div > h3 {
+    font-weight: 400;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.cabecalio > div > h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+#div-historia, #div-memoria {
+    text-align: right;
+}
+
+
+#his {
+    border-bottom: 3px solid red;
+    text-align: center;
+}
