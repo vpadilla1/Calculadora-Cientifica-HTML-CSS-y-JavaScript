@@ -448,3 +448,8 @@ $ (document).on('click', '#ce', function(){
     atualiza();
     $('valor').html('0');
 });
+$ (document).on('click', '#c', function(){
+    atualiza();
+    $('valor').html('0');
+    $('#valor2').html('');
+});
