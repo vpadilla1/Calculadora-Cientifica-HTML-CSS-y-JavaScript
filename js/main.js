@@ -404,3 +404,6 @@ $(document).on('click', '#mMenos', function(){
         memoria2 = memoria2.replace(',','<br>')
     document.getElementById("div-memoria").innerHTML = memoria2;
 });
+$(document).ready(function(){
+    $('#historico').click();
+}); 
