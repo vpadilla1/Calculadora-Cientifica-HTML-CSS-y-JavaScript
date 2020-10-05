@@ -524,3 +524,7 @@ $ (document).on('click', '#log', function(){
     log = Math.log(parseFloat(valor));
     $('valor').html(log.toString().replace(',' , ','));
 });
+$ (document).on('click', '#exp', function(){
+    atualiza();
+    $('valor').html($('#valor').text() + ",e+");
+});
