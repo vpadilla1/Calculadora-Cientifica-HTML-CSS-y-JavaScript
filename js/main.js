@@ -66,3 +66,21 @@ $ (document).on('click', '#elevado', function()){
     $('valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
     vaiMudar = true;
 });
+
+$ (document).on('click', '#sen', function()){
+    atualiza();
+    sen = Math.sen(parseFloat(valor));
+    $('valor').html(sen.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#cos', function()){
+    atualiza();
+    cos = Math.cos(parseFloat(valor));
+    $('valor').html(cos.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#tan', function()){
+    atualiza();
+    tan = Math.tan(parseFloat(valor));
+    $('valor').html(tan.toString().replace(',' , ','));
+});
