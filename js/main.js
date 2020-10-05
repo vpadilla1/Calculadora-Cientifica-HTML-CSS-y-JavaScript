@@ -379,3 +379,8 @@ $(document).on('click', '#ms', function(){
     document.getElementById("div-memoria").innerHTML = memoriaLocal;
     vaiMudar = true;
 });
+$(document).on('click', '#mc', function(){
+    localStorage.setItem("memoria","");
+    document.getElementById("div-memoria").innerHTML = "";
+    memoria = Array();
+});
