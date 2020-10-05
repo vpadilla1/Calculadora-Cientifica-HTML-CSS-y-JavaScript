@@ -361,3 +361,12 @@ $(document).on('click', '#memoria', function(){
     document.getElementById('mem').style.borderBottom = "3px solid red";
     document.getElementById('his').style.borderBottom = "none";
 });
+$(document).on('click', '#historico', function() {
+    $('.tab').html("<div id='div-historico'>Ainda não há histórico</div>");
+    var historicoLocal = localStorage.getItem("historico");
+    while(historicoLocal.includes(','))
+        historicoLocal = historicoLocal.replace(',','<br>');
+    $('#div-historico').html(historicoLocal);
+    $('#his').css('borderBottom', '3px solid red');
+    $('#mem').css('borderBottom', 'none');
+});
