@@ -317,3 +317,38 @@ $(document).on('click', '#hyp', function() {
         $('#tan1').html("<span>tanh<sup>-1</sup></span>");
     }
 });
+document.addEventListener('keydown', function(evt) {
+    atualiza();
+    evt = evt || window.event;
+    var key = evt.keyCode || evt.which;
+    if(key>=96 && key<=105) {
+        val = key-96;
+        $('#'+val).click();
+    }
+    switch(key) {
+        case 8:
+            $('#backspace').click();
+            break;
+        case 27:
+            $('#c').click();
+            break;
+        case 188: case 110:
+            $('#virgula').click();
+            break;
+        case 111: case 193:
+            $('#dividir').click();
+            break;
+        case 106:
+            $('#multiplicar').click();
+            break;
+        case 107: case 187:
+            $('#somar').click;
+            break;
+        case 109: case 189:
+            $('#subtrair').click();
+            break;
+        case 13:
+            $('#igual').click();
+            break;
+    }
+});
