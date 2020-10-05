@@ -53,4 +53,16 @@ $ (document).on('click', '#backspace', function()){
         $ ( '#valor' ).html ( valor.substring ( 0 ,  valor.length - 1 ).replace ( '.' , ',' ) ) ;
     else  if ( $ ( '#valor' ).text ( )  ==  ""  ||  $ ( '#valor' ).text ( )  ==  "-"  ||  valor . length  ==  1 )
         $ ( '#valor' ).html ( "0" ) ;
-}
+});
+
+$ (document).on('click', '#xquad', function()){
+    atualiza();
+    xquad = Math.pow(parseFloat(valor),2);
+    $('valor').html(xquad.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#elevado', function()){
+    atualiza();
+    $('valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
+    vaiMudar = true;
+});
