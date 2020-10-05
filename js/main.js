@@ -150,3 +150,9 @@ $(document).on('click', '#unsobre', function()){
     unsobre = 1/parseFloat(valor);
     $('valor').html(unsobre.toString().replace(',' , ','));
 });
+
+$(document).on('click', '#eax', function()){
+    atualiza();
+    eax = Math.pow(2.71828182845904523, parseFloat(valor));
+    $('valor').html(eax.toString().replace(',' , ','));
+});
