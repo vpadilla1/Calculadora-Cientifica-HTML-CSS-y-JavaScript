@@ -116,35 +116,35 @@ $ (document).on('click', '#tan1', function(){
     $('valor').html(tan.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#raiz', function(){
+$(document).on('click', '#raiz', function() {
     atualiza();
     raiz = Math.sqrt(parseFloat(valor));
-    $('valor').html(raiz.toString().replace(',' , ','));
+    $('#valor').html(raiz.toString().replace('.',','));
 });
 
-$ (document).on('click', '#dezax', function(){
+$(document).on('click', '#dezax', function() {
     atualiza();
     dezax = Math.pow(10, parseFloat(valor));
-    $('valor').html(dezax.toString().replace(',' , ','));
+    $('#valor').html(dezax.toString().replace('.',','));
 });
 
-$ (document).on('click', '#log', function(){
+$(document).on('click', '#log', function() {
     atualiza();
     log = Math.log(parseFloat(valor));
-    $('valor').html(log.toString().replace(',' , ','));
+    $('#valor').html(log.toString().replace('.',','));
 });
 
-$ (document).on('click', '#exp', function(){
+$(document).on('click', '#exp', function() {
     atualiza();
-    $('valor').html($('#valor').text() + ",e+");
+    $('#valor').html($('#valor').text() + ",e+");
 });
 
-
-$(document).on('click', '#mod', function(){
+$(document).on('click', '#mod', function() {
     atualiza();
-    $('valor').html($('#valor').text() + " mod ");
+    $('#valor').html($('#valor').text() + " Mod ");
     vaiMudar = true;
 });
+
 
 
 $(document).on('click', '#unsobre', function(){
