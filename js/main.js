@@ -19,3 +19,10 @@ function atualiza() {
         $(this).css('background-color', 'rgb(250,250,250)');
     });
 }
+
+$ ( documento ) . on ( 'clic' ,  '.numeros' ,  function ( )  {
+    atualiza ( ) ;
+    si ( valor . longitud  <  15 )
+        $ ( '#valor' ) . html ( valor == "0" || vaiMudar ? $ ( this ) . text ( ) . trim ( ) : ( valor + $ ( this ) . text ( ) . trim ( ) ) . replace ( '.' , ', ' ) ) ;
+    vaiMudar  =  falso ;
+} ) ;
