@@ -444,3 +444,7 @@ $ ( documento ).on ( 'clic' ,  '.opp' ,  function ( )  {
         $ ( '# valor2' ).html ( $ ( '# valor2' ).text ( ) + $ ( '#valor' ).text ( )  +  "" + $ ( esto ).text ( ) + "" ) ;
     vaiMudar  =  verdadero ;
 } ) ;
+$ (document).on('click', '#ce', function(){
+    atualiza();
+    $('valor').html('0');
+});
