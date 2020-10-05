@@ -97,3 +97,20 @@ $ (document).on('click', '#cubo', function()){
     vaiMudar = true;
 });
 
+$ (document).on('click', '#sen1', function()){
+    atualiza();
+    sen = Math.pow(Math.sen(parseFloat(valor)), -1);
+    $('valor').html(sen.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#cos1', function()){
+    atualiza();
+    cos = Math.pow(Math.cos(parseFloat(valor)), -1);
+    $('valor').html(cos.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#tan1', function()){
+    atualiza();
+    tan = Math.pow(Math.tan(parseFloat(valor)), -1);
+    $('valor').html(tan.toString().replace(',' , ','));
+});
