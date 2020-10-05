@@ -490,3 +490,7 @@ $ (document).on('click', '#cubo', function(){
     xcubo = Math.pow(parseFloat(valor),3);
     $('valor').html(xcubo.toString().replace(',' , ','));
 });
+$(document).on('click', '#yroot', function(){
+    atualiza();
+    $('valor2').html($('#valor2').text()+$('#valor').text() + " yroot ");
+});
