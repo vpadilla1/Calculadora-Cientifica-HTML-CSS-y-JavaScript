@@ -499,3 +499,8 @@ $ (document).on('click', '#sen1', function(){
     sen = Math.pow(Math.sen(parseFloat(valor)), -1);
     $('valor').html(sen.toString().replace(',' , ','));
 });
+$ (document).on('click', '#cos1', function(){
+    atualiza();
+    cos = Math.pow(Math.cos(parseFloat(valor)), -1);
+    $('valor').html(cos.toString().replace(',' , ','));
+});
