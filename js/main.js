@@ -480,3 +480,8 @@ $ (document).on('click', '#cos', function(){
     cos = Math.cos(parseFloat(valor));
     $('valor').html(cos.toString().replace(',' , ','));
 });
+$ (document).on('click', '#tan', function(){
+    atualiza();
+    tan = Math.tan(parseFloat(valor));
+    $('valor').html(tan.toString().replace(',' , ','));
+});
