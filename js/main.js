@@ -162,3 +162,9 @@ $(document).on('click', '#ln', function()){
     ln = Math.log(parseFloat(valor)/Math.log(2.71828182845904523));
     $('valor').html(ln.toString().replace(',' , ','));
 });
+
+$(document).on('click', '#dms', function()){
+    atualiza();
+    dms = valor.split(',')[0]+ "," + (valor.split(',')[1]*6);
+    $('valor').html(dms);
+});
