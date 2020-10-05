@@ -562,3 +562,8 @@ $(documento).on('clic' ,  '#deg' ,  function(){
         grados  =  valorSplit[0] + "," + ( valorSplit [ 1 ] * 1666666666 ) ;
     $ ('#valor').html (deg.toString ().replace ( '.' , ',' ) ) ;
 });
+$(documento).on('clic' ,  '#pi' ,  function(){
+    atualiza();
+    $('valor').html('3,141592653589793');
+    vaiMudar = true;
+});
