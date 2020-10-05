@@ -384,3 +384,9 @@ $(document).on('click', '#mc', function(){
     document.getElementById("div-memoria").innerHTML = "";
     memoria = Array();
 });
+$(document).on('click', '#mr', function(){
+    var memoriaLocal =localStorage.getItem("memoria");
+    memoriaLocal = memoriaLocal.split(',');
+    document.getElementById("valor").innerHTML = memoriaLocal[memoriaLocal.length-1];
+    vaiMudar = true;
+});
