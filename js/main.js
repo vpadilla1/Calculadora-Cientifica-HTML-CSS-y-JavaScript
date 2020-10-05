@@ -504,3 +504,8 @@ $ (document).on('click', '#cos1', function(){
     cos = Math.pow(Math.cos(parseFloat(valor)), -1);
     $('valor').html(cos.toString().replace(',' , ','));
 });
+$ (document).on('click', '#tan1', function(){
+    atualiza();
+    tan = Math.pow(Math.tan(parseFloat(valor)), -1);
+    $('valor').html(tan.toString().replace(',' , ','));
+});
