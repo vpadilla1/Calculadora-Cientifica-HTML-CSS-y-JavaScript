@@ -94,7 +94,6 @@ $ (document).on('click', '#cubo', function()){
 (document).on('click', '#elevado', function()){
     atualiza();
     $('valor2').html($('#valor2').text()+$('#valor').text() + " yroot ");
-    vaiMudar = true;
 });
 
 $ (document).on('click', '#sen1', function()){
@@ -113,4 +112,10 @@ $ (document).on('click', '#tan1', function()){
     atualiza();
     tan = Math.pow(Math.tan(parseFloat(valor)), -1);
     $('valor').html(tan.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#raiz', function()){
+    atualiza();
+    raiz = Math.sqrt(parseFloat(valor));
+    $('valor').html(raiz.toString().replace(',' , ','));
 });
