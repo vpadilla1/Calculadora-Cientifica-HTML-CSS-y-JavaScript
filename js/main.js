@@ -125,3 +125,16 @@ $ (document).on('click', '#dezax', function()){
     dezax = Math.pow(10, parseFloat(valor));
     $('valor').html(dezax.toString().replace(',' , ','));
 });
+
+$ (document).on('click', '#log', function()){
+    atualiza();
+    log = Math.log(parseFloat(valor),);
+    $('valor').html(log.toString().replace(',' , ','));
+});
+
+$ (document).on('click', '#exp', function()){
+    atualiza();
+    exp = Math.pow(parseFloat(valor),3);
+    $('valor').html($('#valor').text() + ",e+");
+});
+
