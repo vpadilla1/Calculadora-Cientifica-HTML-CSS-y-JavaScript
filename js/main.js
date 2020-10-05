@@ -397,3 +397,10 @@ $(document).on('click', '#mMenos', function(){
     for(i=0; i< memoriaLocal.length-1; i++) {
         memoria2+=memoriaLocal[i]+",";
     }
+    memoria2+= parseFloat(memoriaLocal[memoriaLocal.length-1])-parseFloat($('#valor').text());
+    memoria = memoria2.split(',');
+    localStorage.setItem("memoria",memoria2);
+    while(memoria2.includes(','))
+        memoria2 = memoria2.replace(',','<br>')
+    document.getElementById("div-memoria").innerHTML = memoria2;
+});
