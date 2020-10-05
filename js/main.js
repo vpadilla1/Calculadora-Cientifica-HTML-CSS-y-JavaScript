@@ -533,3 +533,8 @@ $(document).on('click', '#mod', function(){
     $('valor').html($('#valor').text() + " mod ");
     vaiMudar = true;
 });
+$(document).on('click', '#unsobre', function(){
+    atualiza();
+    unsobre = 1/parseFloat(valor);
+    $('valor').html(unsobre.toString().replace(',' , ','));
+});
