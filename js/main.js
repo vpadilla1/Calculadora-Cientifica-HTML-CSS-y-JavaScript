@@ -390,3 +390,10 @@ $(document).on('click', '#mr', function(){
     document.getElementById("valor").innerHTML = memoriaLocal[memoriaLocal.length-1];
     vaiMudar = true;
 });
+$(document).on('click', '#mMenos', function(){
+    var memoriaLocal =localStorage.getItem("memoria");
+    memoriaLocal = memoriaLocal.split(',');
+    var memoria2 = "";
+    for(i=0; i< memoriaLocal.length-1; i++) {
+        memoria2+=memoriaLocal[i]+",";
+    }
