@@ -553,3 +553,12 @@ $(document).on('click', '#dms', function(){
     dms = valor.split(',')[0]+ "," + (valor.split(',')[1]*6);
     $('valor').html(dms);
 });
+$(documento).on('clic' ,  '#deg' ,  function(){
+    atualiza();
+    valorSplit  =  valor.dividir ( '.' ) ;
+    if ((valorSplit [1]*16 ).toString ().length  >  2 )
+        grados  =  (parseInt (valorSplit[0]) + 1 ) + "," + ( valorSplit [ 1 ] * 1666666666 ).subcadena ( 1 ,  ( valorSplit [ 1 ] * 1666666666 ).toString ().length );
+    más
+        grados  =  valorSplit[0] + "," + ( valorSplit [ 1 ] * 1666666666 ) ;
+    $ ('#valor').html (deg.toString ().replace ( '.' , ',' ) ) ;
+});
