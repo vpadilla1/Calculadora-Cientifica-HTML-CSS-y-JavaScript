@@ -27,11 +27,30 @@ $ ( documento ) . on ( 'clic' ,  '.numeros' ,  function ( )  {
     vaiMudar  =  falso ;
 } ) ;
 
-$ ( documento ) . on ( 'clic' ,  '.opp' ,  function ( )  {
-    atualiza ( ) ;
-    if ( $ ( esto ) . texto ( )  ==  "(" )
-        $ ( '# valor2' ) . html ( $ ( '# valor2' ) . text ( ) + "" + $ ( esto ) . text ( ) + "" ) ;
+$ ( documento ).on ( 'clic' ,  '.opp' ,  function ( )  {
+    atualiza () ;
+    if ( $ ( esto ).texto ( )  ==  "(" )
+        $ ( '# valor2' ).html ( $ ( '# valor2' ).text ( ) + "" + $ ( esto ).text ( ) + "" ) ;
     más
-        $ ( '# valor2' ) . html ( $ ( '# valor2' ) . text ( ) + $ ( '#valor' ) . text ( )  +  "" + $ ( esto ) . text ( ) + "" ) ;
+        $ ( '# valor2' ).html ( $ ( '# valor2' ).text ( ) + $ ( '#valor' ).text ( )  +  "" + $ ( esto ).text ( ) + "" ) ;
     vaiMudar  =  verdadero ;
 } ) ;
+
+$ (document).on('click', '#ce', function()){
+    atualiza();
+    $('valor').html('0');
+}
+
+$ (document).on('click', '#c', function()){
+    atualiza();
+    $('valor').html('0');
+    $('#valor2').html('');
+}
+
+$ (document).on('click', '#backspace', function()){
+    atualiza () ;
+    if( valor != "0"  &&  valor.length != 1 )
+        $ ( '#valor' ).html ( valor.substring ( 0 ,  valor.length - 1 ).replace ( '.' , ',' ) ) ;
+    else  if ( $ ( '#valor' ).text ( )  ==  ""  ||  $ ( '#valor' ).text ( )  ==  "-"  ||  valor . length  ==  1 )
+        $ ( '#valor' ).html ( "0" ) ;
+}
