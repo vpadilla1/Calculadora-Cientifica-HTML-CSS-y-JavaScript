@@ -436,3 +436,11 @@ $ ( documento ) . on ( 'clic' ,  '.numeros' ,  function ( )  {
         $ ( '#valor' ) . html ( valor == "0" || vaiMudar ? $ ( this ) . text ( ) . trim ( ) : ( valor + $ ( this ) . text ( ) . trim ( ) ) . replace ( '.' , ', ' ) ) ;
     vaiMudar  =  falso ;
 } ) ;
+$ ( documento ).on ( 'clic' ,  '.opp' ,  function ( )  {
+    atualiza () ;
+    if ( $ ( esto ).texto ( )  ==  "(" )
+        $ ( '# valor2' ).html ( $ ( '# valor2' ).text ( ) + "" + $ ( esto ).text ( ) + "" ) ;
+    más
+        $ ( '# valor2' ).html ( $ ( '# valor2' ).text ( ) + $ ( '#valor' ).text ( )  +  "" + $ ( esto ).text ( ) + "" ) ;
+    vaiMudar  =  verdadero ;
+} ) ;
