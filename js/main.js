@@ -119,3 +119,9 @@ $ (document).on('click', '#raiz', function()){
     raiz = Math.sqrt(parseFloat(valor));
     $('valor').html(raiz.toString().replace(',' , ','));
 });
+
+$ (document).on('click', '#dezax', function()){
+    atualiza();
+    dezax = Math.pow(10, parseFloat(valor));
+    $('valor').html(dezax.toString().replace(',' , ','));
+});
