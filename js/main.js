@@ -197,8 +197,14 @@ $(documento).on('clic' ,  '#factorial' ,  function(){
     $ ('#valor').html(fatorial.toString().replace( '.' , ',' ));
 });
 
-$(documento).on('clic' ,  '#maismanos' ,  function(){
+$(documento).on('clic' ,  '#mas menos' ,  function(){
     atualiza();
     menos = parseFloat(valor)*1;
     $ ('#valor').html(menos.toString().replace( '.' , ',' ));
+});
+
+$(documento).on('clic' ,  '#coma' ,  function(){
+    atualiza();
+    if(valor.includer(','));
+        $('#valor').html + ",");
 });
