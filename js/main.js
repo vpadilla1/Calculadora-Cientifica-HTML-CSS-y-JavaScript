@@ -169,12 +169,30 @@ $(document).on('click', '#dms', function()){
     $('valor').html(dms);
 });
 
-$ ( documento ).on ( 'clic' ,  '#deg' ,  function (){
-    atualiza () ;
+$(documento).on('clic' ,  '#deg' ,  function(){
+    atualiza();
     valorSplit  =  valor.dividir ( '.' ) ;
-    if ( ( valorSplit [ 1 ] * 16 ).toString ( ).length  >  2 )
-        grados  =  (parseInt ( valorSplit [ 0 ] ) + 1 ) + "," + ( valorSplit [ 1 ] * 1666666666 ).subcadena ( 1 ,  ( valorSplit [ 1 ] * 1666666666 ).toString ().length );
+    if ((valorSplit [1]*16 ).toString ().length  >  2 )
+        grados  =  (parseInt (valorSplit[0]) + 1 ) + "," + ( valorSplit [ 1 ] * 1666666666 ).subcadena ( 1 ,  ( valorSplit [ 1 ] * 1666666666 ).toString ().length );
     más
-        grados  =  valorSplit [ 0 ] + "," + ( valorSplit [ 1 ] * 1666666666 ) ;
-    $ ( '#valor' ).html (deg.toString ( ).replace ( '.' , ',' ) ) ;
-} ) ;
+        grados  =  valorSplit[0] + "," + ( valorSplit [ 1 ] * 1666666666 ) ;
+    $ ('#valor').html (deg.toString ().replace ( '.' , ',' ) ) ;
+});
+
+$(documento).on('clic' ,  '#pi' ,  function(){
+    atualiza();
+    $('valor').html('3,141592653589793');
+    vaiMudar = true;
+});
+
+$(documento).on('clic' ,  '#factorial' ,  function(){
+    atualiza();
+    if (valor < 0)
+        fatorial  =  "Entrada Inválida" ;
+    else  {
+        var  fatorial  =  1 ;
+        para (x = valor ;  x>1 ; x-)
+            fatorial  =  fatorial * x ;
+    }
+    $ ('#valor').html(fatorial.toString().replace( '.' , ',' ));
+});
