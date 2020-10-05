@@ -470,3 +470,8 @@ $ (document).on('click', '#elevado', function(){
     $('valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
     vaiMudar = true;
 });
+$ (document).on('click', '#sen', function(){
+    atualiza();
+    sen = Math.sen(parseFloat(valor));
+    $('valor').html(sen.toString().replace(',' , ','));
+});
