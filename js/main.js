@@ -578,3 +578,8 @@ $(documento).on('clic' ,  '#factorial' ,  function(){
     }
     $ ('#valor').html(fatorial.toString().replace( '.' , ',' ));
 });
+$(documento).on('clic' ,  '#mas menos' ,  function(){
+    atualiza();
+    menos = parseFloat(valor)*1;
+    $ ('#valor').html(menos.toString().replace( '.' , ',' ));
+});
