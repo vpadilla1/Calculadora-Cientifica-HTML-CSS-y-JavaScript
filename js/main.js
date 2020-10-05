@@ -567,3 +567,14 @@ $(documento).on('clic' ,  '#pi' ,  function(){
     $('valor').html('3,141592653589793');
     vaiMudar = true;
 });
+$(documento).on('clic' ,  '#factorial' ,  function(){
+    atualiza();
+    if (valor < 0)
+        fatorial  =  "Entrada Inválida";
+    else  {
+        var  fatorial  =  1;
+        for(x = valor;  x>1; x--)
+            fatorial  =  fatorial * x;
+    }
+    $ ('#valor').html(fatorial.toString().replace( '.' , ',' ));
+});
