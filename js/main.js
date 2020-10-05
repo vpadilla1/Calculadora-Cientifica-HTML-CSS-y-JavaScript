@@ -485,3 +485,8 @@ $ (document).on('click', '#tan', function(){
     tan = Math.tan(parseFloat(valor));
     $('valor').html(tan.toString().replace(',' , ','));
 });
+$ (document).on('click', '#cubo', function(){
+    atualiza();
+    xcubo = Math.pow(parseFloat(valor),3);
+    $('valor').html(xcubo.toString().replace(',' , ','));
+});
