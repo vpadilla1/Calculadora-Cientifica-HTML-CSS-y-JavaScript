@@ -36,18 +36,18 @@ $ ( documento ).on ( 'clic' ,  '.opp' ,  function ( )  {
     vaiMudar  =  verdadero ;
 } ) ;
 
-$ (document).on('click', '#ce', function()){
+$ (document).on('click', '#ce', function(){
     atualiza();
     $('valor').html('0');
-}
+});
 
-$ (document).on('click', '#c', function()){
+$ (document).on('click', '#c', function(){
     atualiza();
     $('valor').html('0');
     $('#valor2').html('');
-}
+});
 
-$ (document).on('click', '#backspace', function()){
+$ (document).on('click', '#backspace', function(){
     atualiza () ;
     if( valor != "0"  &&  valor.length != 1 )
         $ ( '#valor' ).html ( valor.substring ( 0 ,  valor.length - 1 ).replace ( '.' , ',' ) ) ;
@@ -55,115 +55,115 @@ $ (document).on('click', '#backspace', function()){
         $ ( '#valor' ).html ( "0" ) ;
 });
 
-$ (document).on('click', '#xquad', function()){
+$ (document).on('click', '#xquad', function(){
     atualiza();
     xquad = Math.pow(parseFloat(valor),2);
     $('valor').html(xquad.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#elevado', function()){
+$ (document).on('click', '#elevado', function(){
     atualiza();
     $('valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
     vaiMudar = true;
 });
 
-$ (document).on('click', '#sen', function()){
+$ (document).on('click', '#sen', function(){
     atualiza();
     sen = Math.sen(parseFloat(valor));
     $('valor').html(sen.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#cos', function()){
+$ (document).on('click', '#cos', function(){
     atualiza();
     cos = Math.cos(parseFloat(valor));
     $('valor').html(cos.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#tan', function()){
+$ (document).on('click', '#tan', function(){
     atualiza();
     tan = Math.tan(parseFloat(valor));
     $('valor').html(tan.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#cubo', function()){
+$ (document).on('click', '#cubo', function(){
     atualiza();
     xcubo = Math.pow(parseFloat(valor),3);
     $('valor').html(xcubo.toString().replace(',' , ','));
 });
 
-$(document).on('click', '#elevado', function()){
+$(document).on('click', '#yroot', function(){
     atualiza();
     $('valor2').html($('#valor2').text()+$('#valor').text() + " yroot ");
 });
 
-$ (document).on('click', '#sen1', function()){
+$ (document).on('click', '#sen1', function(){
     atualiza();
     sen = Math.pow(Math.sen(parseFloat(valor)), -1);
     $('valor').html(sen.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#cos1', function()){
+$ (document).on('click', '#cos1', function(){
     atualiza();
     cos = Math.pow(Math.cos(parseFloat(valor)), -1);
     $('valor').html(cos.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#tan1', function()){
+$ (document).on('click', '#tan1', function(){
     atualiza();
     tan = Math.pow(Math.tan(parseFloat(valor)), -1);
     $('valor').html(tan.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#raiz', function()){
+$ (document).on('click', '#raiz', function(){
     atualiza();
     raiz = Math.sqrt(parseFloat(valor));
     $('valor').html(raiz.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#dezax', function()){
+$ (document).on('click', '#dezax', function(){
     atualiza();
     dezax = Math.pow(10, parseFloat(valor));
     $('valor').html(dezax.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#log', function()){
+$ (document).on('click', '#log', function(){
     atualiza();
     log = Math.log(parseFloat(valor));
     $('valor').html(log.toString().replace(',' , ','));
 });
 
-$ (document).on('click', '#exp', function()){
+$ (document).on('click', '#exp', function(){
     atualiza();
     $('valor').html($('#valor').text() + ",e+");
 });
 
 
-$(document).on('click', '#elevado', function()){
+$(document).on('click', '#mod', function(){
     atualiza();
-    $('valor2').html($('#valor2').text()+$('#valor').text() + " mod ");
+    $('valor').html($('#valor').text() + " mod ");
     vaiMudar = true;
 });
 
 
-$(document).on('click', '#unsobre', function()){
+$(document).on('click', '#unsobre', function(){
     atualiza();
     unsobre = 1/parseFloat(valor);
     $('valor').html(unsobre.toString().replace(',' , ','));
 });
 
-$(document).on('click', '#eax', function()){
+$(document).on('click', '#eax', function(){
     atualiza();
     eax = Math.pow(2.71828182845904523, parseFloat(valor));
     $('valor').html(eax.toString().replace(',' , ','));
 });
 
-$(document).on('click', '#ln', function()){
+$(document).on('click', '#ln', function(){
     atualiza();
     ln = Math.log(parseFloat(valor)/Math.log(2.71828182845904523));
     $('valor').html(ln.toString().replace(',' , ','));
 });
 
-$(document).on('click', '#dms', function()){
+$(document).on('click', '#dms', function(){
     atualiza();
     dms = valor.split(',')[0]+ "," + (valor.split(',')[1]*6);
     $('valor').html(dms);
@@ -188,11 +188,11 @@ $(documento).on('clic' ,  '#pi' ,  function(){
 $(documento).on('clic' ,  '#factorial' ,  function(){
     atualiza();
     if (valor < 0)
-        fatorial  =  "Entrada Inválida" ;
+        fatorial  =  "Entrada Inválida";
     else  {
-        var  fatorial  =  1 ;
-        para (x = valor ;  x>1 ; x-)
-            fatorial  =  fatorial * x ;
+        var  fatorial  =  1;
+        for(x = valor;  x>1; x--)
+            fatorial  =  fatorial * x;
     }
     $ ('#valor').html(fatorial.toString().replace( '.' , ',' ));
 });
@@ -205,6 +205,6 @@ $(documento).on('clic' ,  '#mas menos' ,  function(){
 
 $(documento).on('clic' ,  '#coma' ,  function(){
     atualiza();
-    if(valor.includer(','));
-        $('#valor').html + ",");
+    if(!valor.includes(','))
+        $('#valor').html(valor+",");
 });
