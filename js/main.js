@@ -528,3 +528,8 @@ $ (document).on('click', '#exp', function(){
     atualiza();
     $('valor').html($('#valor').text() + ",e+");
 });
+$(document).on('click', '#mod', function(){
+    atualiza();
+    $('valor').html($('#valor').text() + " mod ");
+    vaiMudar = true;
+});
