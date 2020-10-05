@@ -143,3 +143,10 @@ $(document).on('click', '#elevado', function()){
     $('valor2').html($('#valor2').text()+$('#valor').text() + " mod ");
     vaiMudar = true;
 });
+
+
+$(document).on('click', '#unsobre', function()){
+    atualiza();
+    unsobre = 1/parseFloat(valor);
+    $('valor').html(unsobre.toString().replace(',' , ','));
+});
