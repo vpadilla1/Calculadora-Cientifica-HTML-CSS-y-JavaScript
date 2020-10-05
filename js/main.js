@@ -352,3 +352,12 @@ document.addEventListener('keydown', function(evt) {
             break;
     }
 });
+$(document).on('click', '#memoria', function(){
+    $('.tab').html("<div id='div-memoria'>Não há nada salvo na memória</div>");
+    var memoriaLocal =localStorage.getItem("memoria");
+    while(memoriaLocal.includes(','))
+        memoriaLocal = memoriaLocal.replace(',','<br>')
+    document.getElementById("div-memoria").innerHTML = memoriaLocal;
+    document.getElementById('mem').style.borderBottom = "3px solid red";
+    document.getElementById('his').style.borderBottom = "none";
+});
