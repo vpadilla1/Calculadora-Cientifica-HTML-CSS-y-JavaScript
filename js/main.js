@@ -211,4 +211,63 @@ $(documento).on('clic' ,  '#coma' ,  function(){
         $('#valor').html(valor+",");
 });
 
-console.log("hola mundo");
+$(document).on('click', '#igual', function () {
+    atualiza();
+    valor2 = $('#valor2').text();
+    valor2 = valor2.replace('×', '*');
+    valor2 = valor2.replace('÷', '/');
+    conta = "";
+    if (valor2.substring(valor2.length - 2, valor2.length - 1) == ")")
+        conta = valor2;
+    else
+        conta = valor2 + $('#valor').text();
+    resultado = 0;
+    conta = conta.replace(',', '.');
+    historico.push(conta);
+    if (conta.includes('^')) {
+        conta = conta.split('^');
+        aux = 0;
+        for (i = 0; i < conta.length; i++) {
+            if (i == 0)
+                resultado = eval(conta[0]);
+            else
+                resultado = Math.pow(resultado, eval(conta[i]));
+        }
+    }
+    else if (conta.includes('Mod')) {
+        conta = conta.split('Mod');
+        aux = 0;
+        for (i = 0; i < conta.length; i++) {
+            if (i == 0)
+                resultado = eval(conta[0]);
+            else
+                resultado = resultado % eval(conta[i]);
+        }
+    }
+    else if (conta.includes('yroot')) {
+        conta = conta.split('yroot');
+        aux = 0;
+        for (i = 0; i < conta.length; i++) {
+            if (i == 0)
+                resultado = eval(conta[0]);
+            else
+                resultado = Math.pow(resultado, 1 / eval(conta[i]));
+        }
+    }
+    else
+        resultado = eval(conta);
+    $('#valor2').html("");
+    vaiMudar = true;
+    if (fe) {
+        $('#valor').html(resultado.toExponential().toString().replace('.', ','));
+    }
+    else {
+        $('#valor').html(resultado.toString().replace('.', ','));
+    }
+    historico.push("<h3>" + resultado + "</h3>");
+    localStorage.setItem("historico", historico);
+    var historicoLocal = localStorage.getItem("historico");
+    while (historicoLocal.includes(','))
+        historicoLocal = historicoLocal.replace(',', '<br>');
+    $('#div-historico').html(historicoLocal);
+});
