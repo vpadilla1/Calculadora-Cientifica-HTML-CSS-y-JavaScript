@@ -494,3 +494,8 @@ $(document).on('click', '#yroot', function(){
     atualiza();
     $('valor2').html($('#valor2').text()+$('#valor').text() + " yroot ");
 });
+$ (document).on('click', '#sen1', function(){
+    atualiza();
+    sen = Math.pow(Math.sen(parseFloat(valor)), -1);
+    $('valor').html(sen.toString().replace(',' , ','));
+});
