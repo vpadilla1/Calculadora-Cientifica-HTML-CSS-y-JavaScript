@@ -583,3 +583,8 @@ $(documento).on('clic' ,  '#mas menos' ,  function(){
     menos = parseFloat(valor)*1;
     $ ('#valor').html(menos.toString().replace( '.' , ',' ));
 });
+$(documento).on('clic' ,  '#coma' ,  function(){
+    atualiza();
+    if(!valor.includes(','))
+        $('#valor').html(valor+",");
+});
