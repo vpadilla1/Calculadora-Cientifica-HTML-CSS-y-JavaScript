@@ -271,3 +271,27 @@ $(document).on('click', '#igual', function () {
         historicoLocal = historicoLocal.replace(',', '<br>');
     $('#div-historico').html(historicoLocal);
 });
+$(document).on('click', '#deg2', function () {
+    if (deg == "deg") {
+        deg = "rad";
+        this.innerHTML = "RAD";
+    }
+    else if (deg == "rad") {
+        deg = "grad";
+        this.innerHTML = "GRAD";
+    }
+    else {
+        deg = "deg";
+        this.innerHTML = "DEG";
+    }
+});
+$(document).on('click', '#fe', function() {
+    if(fe) {
+        fe= false;
+        this.style.borderBottom = "none";
+    }
+    else {
+        fe = true;
+        this.style.borderBottom = "3px solid red";
+    }
+});
