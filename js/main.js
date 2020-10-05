@@ -453,3 +453,10 @@ $ (document).on('click', '#c', function(){
     $('valor').html('0');
     $('#valor2').html('');
 });
+(document).on('click', '#backspace', function(){
+    atualiza () ;
+    if( valor != "0"  &&  valor.length != 1 )
+        $ ( '#valor' ).html ( valor.substring ( 0 ,  valor.length - 1 ).replace ( '.' , ',' ) ) ;
+    else  if ( $ ( '#valor' ).text ( )  ==  ""  ||  $ ( '#valor' ).text ( )  ==  "-"  ||  valor . length  ==  1 )
+        $ ( '#valor' ).html ( "0" ) ;
+});
