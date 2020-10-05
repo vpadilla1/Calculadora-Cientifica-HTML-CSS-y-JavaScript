@@ -295,3 +295,25 @@ $(document).on('click', '#fe', function() {
         this.style.borderBottom = "3px solid red";
     }
 });
+$(document).on('click', '#hyp', function() {
+    if(hyp) {
+        hyp = false;
+        this.style.borderBottom = "none";
+        $('#sen').html("<span>sin</span>");
+        $('#cos').html("<span>cos</span>");
+        $('#tan').html("<span>tan</span>");
+        $('#sen1').html("<span>sin<sup>-1</sup></span>");
+        $('#cos1').html("<span>cos<sup>-1</sup></span>");
+        $('#tan1').html("<span>tan<sup>-1</sup></span>");
+    }
+    else {
+        hyp = true;
+        this.style.borderBottom = "3px solid red";
+        $('#sen').html("<span>sinh</span>");
+        $('#cos').html("<span>cosh</span>");
+        $('#tan').html("<span>tanh</span>");
+        $('#sen1').html("<span>sinh<sup>-1</sup></span>");
+        $('#cos1').html("<span>cosh<sup>-1</sup></span>");
+        $('#tan1').html("<span>tanh<sup>-1</sup></span>");
+    }
+});
