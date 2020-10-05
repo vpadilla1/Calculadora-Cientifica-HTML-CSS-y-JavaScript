@@ -91,7 +91,7 @@ $ (document).on('click', '#cubo', function()){
     $('valor').html(xcubo.toString().replace(',' , ','));
 });
 
-(document).on('click', '#elevado', function()){
+$(document).on('click', '#elevado', function()){
     atualiza();
     $('valor2').html($('#valor2').text()+$('#valor').text() + " yroot ");
 });
@@ -128,13 +128,18 @@ $ (document).on('click', '#dezax', function()){
 
 $ (document).on('click', '#log', function()){
     atualiza();
-    log = Math.log(parseFloat(valor),);
+    log = Math.log(parseFloat(valor));
     $('valor').html(log.toString().replace(',' , ','));
 });
 
 $ (document).on('click', '#exp', function()){
     atualiza();
-    exp = Math.pow(parseFloat(valor),3);
     $('valor').html($('#valor').text() + ",e+");
 });
 
+
+$(document).on('click', '#elevado', function()){
+    atualiza();
+    $('valor2').html($('#valor2').text()+$('#valor').text() + " mod ");
+    vaiMudar = true;
+});
