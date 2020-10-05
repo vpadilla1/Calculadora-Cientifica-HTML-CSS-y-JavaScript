@@ -1,3 +1,5 @@
+
+
 var vaiMudar = false, cont, valor, historico = Array(), memoria = Array(), fe = false, hyp=false; deg="deg";
 
 function atualiza() {
@@ -208,3 +210,5 @@ $(documento).on('clic' ,  '#coma' ,  function(){
     if(!valor.includes(','))
         $('#valor').html(valor+",");
 });
+
+console.log("hola mundo");
