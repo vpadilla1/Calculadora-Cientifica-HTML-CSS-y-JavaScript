@@ -509,3 +509,8 @@ $ (document).on('click', '#tan1', function(){
     tan = Math.pow(Math.tan(parseFloat(valor)), -1);
     $('valor').html(tan.toString().replace(',' , ','));
 });
+$ (document).on('click', '#raiz', function(){
+    atualiza();
+    raiz = Math.sqrt(parseFloat(valor));
+    $('valor').html(raiz.toString().replace(',' , ','));
+});
