@@ -370,3 +370,12 @@ $(document).on('click', '#historico', function() {
     $('#his').css('borderBottom', '3px solid red');
     $('#mem').css('borderBottom', 'none');
 });
+$(document).on('click', '#ms', function(){
+    memoria.push($('#valor').text());
+    localStorage.setItem("memoria",memoria);
+    var memoriaLocal =localStorage.getItem("memoria");
+    while(memoriaLocal.includes(','))
+        memoriaLocal = memoriaLocal.replace(',','<br>')
+    document.getElementById("div-memoria").innerHTML = memoriaLocal;
+    vaiMudar = true;
+});
