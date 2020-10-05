@@ -57,34 +57,34 @@ $(document).on('click', '#backspace', function() {
         $('#valor').html("0");
 });
 
-$ (document).on('click', '#xquad', function(){
+$(document).on('click', '#xquad', function() {
     atualiza();
     xquad = Math.pow(parseFloat(valor),2);
-    $('valor').html(xquad.toString().replace(',' , ','));
+    $('#valor').html(xquad.toString().replace('.',','));
 });
 
-$ (document).on('click', '#elevado', function(){
+$(document).on('click', '#elevado', function() {
     atualiza();
-    $('valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
+    $('#valor2').html($('#valor2').text()+$('#valor').text() + " ^ ");
     vaiMudar = true;
 });
 
-$ (document).on('click', '#sen', function(){
+$(document).on('click', '#sen', function() {
     atualiza();
-    sen = Math.sen(parseFloat(valor));
-    $('valor').html(sen.toString().replace(',' , ','));
+    sen = Math.sin(parseFloat(valor));
+    $('#valor').html(sen.toString().replace('.',','));
 });
 
-$ (document).on('click', '#cos', function(){
+$(document).on('click', '#cos', function() {
     atualiza();
     cos = Math.cos(parseFloat(valor));
-    $('valor').html(cos.toString().replace(',' , ','));
+    $('#valor').html(cos.toString().replace('.',','));
 });
 
-$ (document).on('click', '#tan', function(){
+$(document).on('click', '#tan', function() {
     atualiza();
     tan = Math.tan(parseFloat(valor));
-    $('valor').html(tan.toString().replace(',' , ','));
+    $('#valor').html(tan.toString().replace('.',','));
 });
 
 $ (document).on('click', '#cubo', function(){
